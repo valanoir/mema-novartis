@@ -252,34 +252,33 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
 <script>
-      $(document).ready(function() {
-        $('#carouselExampleControls').carousel('pause');
+    $(document).ready(function() {
+        $('#carouselExampleControls').carousel({
+            interval: false
+        });
     });
-
+    
     function showPopup() {
         var popup = document.getElementById('popup');
         popup.style.display = 'block';
-        $('#carouselExampleControls').carousel('pause');
     }
-
+    
     function hidePopup() {
         var popup = document.getElementById('popup');
         popup.style.display = 'none';
-        $('#carouselExampleControls').carousel('cycle');
     }
-
+    
     function showSecondPopup() {
         var popup = document.getElementById('second-popup');
         popup.style.display = 'block';
-        $('#carouselExampleControls').carousel('pause');
     }
-
+    
     function hideSecondPopup() {
         var popup = document.getElementById('second-popup');
         popup.style.display = 'none';
-        $('#carouselExampleControls').carousel('cycle');
     }
-</script>
+    </script>
+    
 
 </body>
 </html>
