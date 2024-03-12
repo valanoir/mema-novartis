@@ -7,60 +7,58 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        /* Set the container to a fixed size based on your resolution */
         #carouselExampleControls {
             max-width: 1024px;
             max-height: 720px;
             margin: auto;
-            margin-top: 50px; /* Adjust as needed */
-            position: relative; /* Set position relative for absolute positioning */
+            position: relative; 
         }
 
-        /* Style for clickable box */
         .clickable-box {
-            position: absolute;
-            top: 50%;
-            left: 36%;
-            transform: translate(-50%, -50%);
-            width: 550px;
+            position: relative;
+            /* top: 80%;
+            left: 36%; */
+            transform: translate(7%, -160%);
+            width: 600px;
             height: 320px;
             border: 2px solid transparent;
             background-color: transparent;
             cursor: pointer;
-            z-index: 1000; /* Ensure it's above the carousel */
+            z-index: 1000; 
         }
 
-        /* Style for clickable box on the 8th page */
         .clickable-box-8 {
-            position: absolute;
-            top: 80.7%;
-            right: 26%;
-            transform: translate(50%, -50%);
+            position: relative;
+            /* top: 80.7%; */
+            /* right: %; */
+            /* left: 70%; */
+            /* bottom: 80%; */
+            transform: translate(350%, -600%);
             width: 190px;
             height: 25px;
             border: transparent;
             background-color: transparent;
             cursor: pointer;
-            z-index: 1000; /* Ensure it's above the carousel */
-            border-radius: 30px; /* Border radius */
+            z-index: 1000; 
+            border-radius: 30px;
         }
         .clickable-box-19 {
-            position: absolute;
+            position: relative;
             top: 62%;
-            right: 13%;
-            transform: translate(50%, -50%);
+            right: -63%;
+            transform: translate(360%, -510%);
             width: 60px;
             height: 60px;
             border: transparent;
             background-color: transparent;
             cursor: pointer;
-            z-index: 1000; /* Ensure it's above the carousel */
-            border-radius: 30px; /* Border radius */
+            z-index: 1000; 
+            border-radius: 30px; 
         }
         .close_button {
-            position: absolute;
+            position:relative;
             top: 3.5%;
-            right: 3%;
+            right: -94%;
             transform: translate(50%, -50%);
             width: 30px;
             height: 30px;
@@ -72,10 +70,10 @@
         }
 
         .close_button2 {
-            position: absolute;
-            top: 7%;
-            right: 12%;
-            transform: translate(50%, -50%);
+            position: relative;
+            top:6%;
+            right: -86.5%;
+            /* transform: translate(50%, -50%); */
             width: 30px;
             height: 30px;
             border: transparent;
@@ -100,7 +98,7 @@
         }
 
         .popup-content {
-            position: absolute;
+            position: relative;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -119,15 +117,15 @@
             position: relative;
         }
         .popup-content2 {
-            position: absolute;
-            top: 27%;
+            position: relative;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 100%; /* Adjust as needed */
-            height: 50%; /* Adjust as needed */
+            height: 100%; /* Adjust as needed */
             background-repeat: no-repeat;
             background-size: contain;
-            border-radius: 20px;
+            border-radius: 50px;
         }
     </style>
 </head>
