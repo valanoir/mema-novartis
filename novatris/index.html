@@ -65,7 +65,21 @@
             width: 30px;
             height: 30px;
             border: transparent;
-            background-color:red;
+            background-color: transparent;
+            cursor: pointer;
+            z-index: 1000; /* Ensure it's above the carousel */
+            border-radius: 30px; /* Border radius */
+        }
+
+        .close_button2 {
+            position: absolute;
+            top: 7%;
+            right: 12%;
+            transform: translate(50%, -50%);
+            width: 30px;
+            height: 30px;
+            border: transparent;
+            background-color: transparent;
             cursor: pointer;
             z-index: 1000; /* Ensure it's above the carousel */
             border-radius: 30px; /* Border radius */
@@ -104,6 +118,17 @@
             margin: auto;
             position: relative;
         }
+        .popup-content2 {
+            position: absolute;
+            top: 27%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%; /* Adjust as needed */
+            height: 50%; /* Adjust as needed */
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 20px;
+        }
     </style>
 </head>
 <body>
@@ -131,13 +156,12 @@
         <div class="carousel-item">
             <img class="d-block w-100" src="images/7.png" alt="Seventh slide" width="1024" height="720">
             <!-- Clickable box -->
-            <div class="clickable-box" onclick="window.open('https://www.youtube.com/watch?v=1-KaHFwd_f0', '_blank')"></div>
+            <div class="clickable-box" onclick="window.open('https://www.youtube.com', '_blank')"></div>
         </div>
         <div class="carousel-item">
             <img class="d-block w-100" src="images/8.png" alt="Eighth slide" width="1024" height="720">
             <!-- Clickable box for 8th page -->
             <div class="clickable-box-8" onclick="showSecondPopup()"></div>
-
         </div>
         <!-- Add more carousel items as needed -->
         <div class="carousel-item ">
@@ -183,7 +207,6 @@
         <div class="carousel-item ">
             <img class="d-block w-100" src="images/25.png" alt="twentyfive slide" width="1024" height="720">
         </div>
-
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -202,7 +225,8 @@
 </div>
 
 <div id="second-popup" class="popup-container">
-        <div class="close_button" onclick="hideSecondPopup()"></div>
+    <div class="popup-content2">
+        <div class="close_button2" onclick="hideSecondPopup()"></div>
         <div id="second-carousel" class="carousel slide popup-carousel" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -221,6 +245,7 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+    </div>
 </div>
 
 <!-- Add Bootstrap JS and jQuery -->
