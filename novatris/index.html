@@ -57,6 +57,19 @@
             z-index: 1000; /* Ensure it's above the carousel */
             border-radius: 30px; /* Border radius */
         }
+        .close_button {
+            position: absolute;
+            top: 3.5%;
+            right: 3%;
+            transform: translate(50%, -50%);
+            width: 30px;
+            height: 30px;
+            border: transparent;
+            background-color: transparent;
+            cursor: pointer;
+            z-index: 1000; /* Ensure it's above the carousel */
+            border-radius: 30px; /* Border radius */
+        }
 
         /* Styles for the popup */
         .popup-container {
@@ -79,14 +92,16 @@
             transform: translate(-50%, -50%);
             width: 80%; /* Adjust as needed */
             height: 80%; /* Adjust as needed */
-            background-color: red;
+            background:url(images/20.png) ;
+            background-repeat: no-repeat;
+            background-size: contain;
             border-radius: 10px;
         }
     </style>
 </head>
 <body>
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-bs-touch="true">
+<div id="carouselExampleControls" class="carousel slide"  data-bs-touch="true">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img class="d-block w-100" src="images/1.png" alt="First slide" width="1024" height="720">
@@ -144,7 +159,21 @@
         <div class="carousel-item ">
             <img class="d-block w-100" src="images/19.png" alt="ninteenth slide" width="1024" height="720">
             <div class="clickable-box-19" onclick="showPopup()"></div>
-
+        </div>
+        <div class="carousel-item ">
+            <img class="d-block w-100" src="images/21.png" alt="twentyone slide" width="1024" height="720">
+        </div>
+        <div class="carousel-item ">
+            <img class="d-block w-100" src="images/22.png" alt="twentytwo slide" width="1024" height="720">
+        </div>
+        <div class="carousel-item ">
+            <img class="d-block w-100" src="images/23.png" alt="twentythree slide" width="1024" height="720">
+        </div>
+        <div class="carousel-item ">
+            <img class="d-block w-100" src="images/24.png" alt="twentyfour slide" width="1024" height="720">
+        </div>
+        <div class="carousel-item ">
+            <img class="d-block w-100" src="images/25.png" alt="twentyfive slide" width="1024" height="720">
         </div>
 
     </div>
@@ -157,17 +186,34 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-<div id="popup" class="popup-container" style="display: none;">
-    <div class="popup-content"></div>
+
+<div id="popup" class="popup-container">
+    <div class="popup-content">
+        <div class="close_button" onclick="hidePopup()"></div>
+    </div>
 </div>
 
 <!-- Add Bootstrap JS and jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
 <script>
+      $(document).ready(function() {
+        // Pause carousel on page load
+        $('#carouselExampleControls').carousel('pause');
+    });
+
     function showPopup() {
         var popup = document.getElementById('popup');
         popup.style.display = 'block';
+        // Pause carousel when popup is shown
+        $('#carouselExampleControls').carousel('pause');
+    }
+
+    function hidePopup() {
+        var popup = document.getElementById('popup');
+        popup.style.display = 'none';
+        // Resume carousel when popup is hidden
+        $('#carouselExampleControls').carousel('cycle');
     }
 </script>
 
